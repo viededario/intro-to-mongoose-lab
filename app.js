@@ -70,7 +70,7 @@ const quitCustomer = async () => {
     process.exit();
 };
 
-const choiceOptions = () => {
+const choiceOptions = async () => {
     console.log(" 1. Create a customer");
     console.log(" 2. View All customers");
     console.log(" 3. update a customer");
@@ -84,20 +84,24 @@ const choiceOptions = () => {
       createCustomer();
     }
 
-    if (methodNum === '2') {
+    else if (methodNum === '2') {
         viewCustomers();
     }
 
-    if (methodNum === '3') {
+    else if (methodNum === '3') {
         updateCustomer();
     }
 
-    if (methodNum === '4') {
+    else if (methodNum === '4') {
      deleteCustomer();
     }
 
-    if (methodNum === '5') {
+    else if (methodNum === '5') {
         quitCustomer();
+    }
+
+    else {
+        console.log("Invalid option. Please choose a valid number.")
     }
 }
 choiceOptions();

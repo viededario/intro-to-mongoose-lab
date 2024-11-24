@@ -1,8 +1,14 @@
 const mongoose = require('mongoose')
 
 const customerSchema = new mongoose.Schema({
-    name: String,
-    age: Number
+    name: {
+        type: String,
+        required: true,
+    },
+    age: {
+        type: Number,
+        require: true
+    },
 });
 
 const Customer = mongoose.model('Customer',customerSchema);
